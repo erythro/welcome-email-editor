@@ -488,6 +488,7 @@ if (!function_exists('wp_new_user_notification')) {
 				if (trim($settings->we_attachment_url)) {
 					$attachment = str_replace(trailingslashit(site_url()), trailingslashit($_SERVER['DOCUMENT_ROOT']), $settings->we_attachment_url);
 				}
+				unset($attachment);
 
 				wp_mail($user_email, $user_subject, $user_message, $headers, $attachment);
 			}
