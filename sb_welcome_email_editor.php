@@ -809,6 +809,7 @@ function sb_we_get_wysiwyg($name, $value, $class=false, $style=false, $rows=fals
 	ob_start();
 
 	wp_editor($value,preg_replace("/[^A-Za-z]/","_",$name),array(
+		"wpautop" => false,
 		"media_buttons" => false,
 		"textarea_name" => $name,
 		"textarea_rows" => (!empty($rows) ? $rows :get_option('default_post_edit_rows', 10)),
