@@ -50,9 +50,8 @@ This method passes a filter an array and you can write in your own code to add h
 
 function my_sb_we_replace_array($hooks, $user_id, $settings) {
     $hooks['my_hook'] = 'test';
-    
+
     return $hooks;
 }`
 
 This will allow the plugin to process a hook called [my_hook] and replace it with the word test. The user id is passed to the function as well so you can get information about the user and replace that in as well as the settings array from the welcome email editor plugin. If you need help with this please get in touch.
-
